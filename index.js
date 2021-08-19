@@ -19,7 +19,6 @@ function startQuestionnaire(){
         }
     ])
     .then(answers => {
-
         if(answers.type === "EXIT"){
             return;
         }
@@ -28,7 +27,6 @@ function startQuestionnaire(){
             // Follow-up questions are based off the previous response
             addNewEmployee(answers.type);
         }
-
     })
 
 }
@@ -89,7 +87,7 @@ function addNewEmployee(employeeType){
         }
 
         // Just testing...
-        console.log("The current team:");
+        console.log("Current team:");
         console.log(employeeGroup);
 
         inquirer.prompt([
